@@ -16,6 +16,6 @@ def geocode(q, api_key):
     except (KeyError, IndexError):
         return None, (None, None)
     name = json['result_set'][0]['address']['display_name']
-    return name, (lat, lon)
+    return name, (lon, lat)
 
 geocoder = partial2(geocode)

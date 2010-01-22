@@ -22,6 +22,6 @@ def geocode(q, api_key):
         name = find(place, 'ns:name').text.decode('utf8')
         lat = float(find(place, 'ns:centroid/ns:latitude').text)
         lon = float(find(place, 'ns:centroid/ns:longitude').text)
-        return name, (lat, lon)
+        return name, (lon, lat)
 
 geocoder = partial2(geocode)

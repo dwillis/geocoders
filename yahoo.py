@@ -35,6 +35,6 @@ def geocode(q, api_key):
         lat = float(find(result, 'ns:Latitude').text)
         lon = float(find(result, 'ns:Longitude').text)
         
-        return (name, (lat, lon))
+        return (name, (lon, lat))
     
 geocoder = partial2(geocode)
